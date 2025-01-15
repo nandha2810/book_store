@@ -17,7 +17,7 @@ const EditBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://backend-gxlb.onrender.com/book/${id}`)
+      .get(`https://book-store-backend-di3w.onrender.com/book/${id}`)
       .then((res) => {
         setLoading(false);
         setTitle(res.data.title);
@@ -33,7 +33,7 @@ const EditBook = () => {
     const data = { title, author, publishYear };
     setLoading(true);
     axios
-      .put(`https://backend-gxlb.onrender.com/book/${id}`, data)
+      .put(`https://book-store-backend-di3w.onrender.com/book/${id}`, data)
       .then((res) => {
         setLoading(false);
         enqueueSnackbar("Book Edited Successfully", { variant: "success" });

@@ -17,7 +17,7 @@ const CreateBook = () => {
     const data = { title, author, publishYear };
     setLoading(true);
     axios
-      .post("https://backend-gxlb.onrender.com/book/", data)
+      .post("https://book-store-backend-di3w.onrender.com/book/", data)
       .then((res) => {
         setLoading(false);
         enqueueSnackbar("Book Created Successfully", { variant: "success" });
